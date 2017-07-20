@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-20T23:38:50+00:00</updated><id>http://localhost:4000/</id><title type="html">Nijraj Gelani</title><subtitle>My blog for the stuff I like and the stuff I don't like.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-20T23:47:02+00:00</updated><id>http://localhost:4000/</id><title type="html">Nijraj Gelani</title><subtitle>My blog for the stuff I like and the stuff I don't like.
 </subtitle><entry><title type="html">Parsing JSON in C using JSMN</title><link href="http://localhost:4000/2017/07/17/parsing-json-in-c-using-jsmn.html" rel="alternate" type="text/html" title="Parsing JSON in C using JSMN" /><published>2017-07-17T00:00:00+00:00</published><updated>2017-07-17T00:00:00+00:00</updated><id>http://localhost:4000/2017/07/17/parsing-json-in-c-using-jsmn</id><content type="html" xml:base="http://localhost:4000/2017/07/17/parsing-json-in-c-using-jsmn.html">&lt;p&gt;I recently came across this small and really useful library, JSMN 
 (pronounced jasmine) which is really easy and useful for parsing JSON 
 data in C with small but useful API.&lt;/p&gt;
@@ -75,16 +75,16 @@ defined as below :&lt;/p&gt;
 &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// store your JSON data in a character pointer
 &lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jsmn_parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tokens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;256&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// n will now containe number of parsed tokens or a negative
+&lt;span class=&quot;c1&quot;&gt;// n will now contain number of parsed tokens or a negative
 // error value
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;If you don’t know the number of tokens beforehand you can pass &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt; 
 instead of tokens and it will return number of tokens without actually 
-storing them so you can allocate memory appropriatly.&lt;/p&gt;
+storing them so you can allocate memory appropriately.&lt;/p&gt;
 
-&lt;p&gt;If you’re reading input from a stream then you can continously check 
+&lt;p&gt;If you’re reading input from a stream then you can continuously check 
 if return value of &lt;code class=&quot;highlighter-rouge&quot;&gt;jsmn_parse&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;JSMN_ERROR_NOMEM&lt;/code&gt; and if it is then 
 reallocate more memory.&lt;/p&gt;
 

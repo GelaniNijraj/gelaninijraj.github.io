@@ -153,16 +153,16 @@ defined as below :</p>
 <span class="n">json</span> <span class="o">=</span> <span class="p">...</span> <span class="c1">// store your JSON data in a character pointer
 </span>
 <span class="n">n</span> <span class="o">=</span> <span class="n">jsmn_parse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">parser</span><span class="p">,</span> <span class="n">json</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">json</span><span class="p">),</span> <span class="n">tokens</span><span class="p">,</span> <span class="mi">256</span><span class="p">);</span>
-<span class="c1">// n will now containe number of parsed tokens or a negative
+<span class="c1">// n will now contain number of parsed tokens or a negative
 // error value
 </span></code></pre>
 </div>
 
 <p>If you don’t know the number of tokens beforehand you can pass <code class="highlighter-rouge">NULL</code> 
 instead of tokens and it will return number of tokens without actually 
-storing them so you can allocate memory appropriatly.</p>
+storing them so you can allocate memory appropriately.</p>
 
-<p>If you’re reading input from a stream then you can continously check 
+<p>If you’re reading input from a stream then you can continuously check 
 if return value of <code class="highlighter-rouge">jsmn_parse</code> is <code class="highlighter-rouge">JSMN_ERROR_NOMEM</code> and if it is then 
 reallocate more memory.</p>
 

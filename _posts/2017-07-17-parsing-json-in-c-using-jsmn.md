@@ -79,15 +79,15 @@ char *json;
 json = ... // store your JSON data in a character pointer
 
 n = jsmn_parse(&parser, json, strlen(json), tokens, 256);
-// n will now containe number of parsed tokens or a negative
+// n will now contain number of parsed tokens or a negative
 // error value
 ```
 
 If you don't know the number of tokens beforehand you can pass `NULL` 
 instead of tokens and it will return number of tokens without actually 
-storing them so you can allocate memory appropriatly.
+storing them so you can allocate memory appropriately.
 
-If you're reading input from a stream then you can continously check 
+If you're reading input from a stream then you can continuously check 
 if return value of `jsmn_parse` is `JSMN_ERROR_NOMEM` and if it is then 
 reallocate more memory.
 
